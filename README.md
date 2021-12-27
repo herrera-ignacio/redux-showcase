@@ -12,7 +12,6 @@
   - [Design Patterns](#design-patterns)
     - [Classic](#classic)
       - [With Redux Saga](#with-redux-saga)
-    - [Classic](#classic-1)
       - [Custom Middlewares](#custom-middlewares)
     - [Ducks Pattern](#ducks-pattern)
       - [Redux Toolkit](#redux-toolkit)
@@ -88,23 +87,28 @@ Please refer to [Redux Style Guide](https://redux.js.org/style-guide/style-guide
 
 ### Classic
 
+Common disadvantages:
+
+* **folder-by-type** or **function-first folder** structure
+* Strongly coupled with libraries -> need to ramp up in every project
+* Very opinionated
+* Hard to maintain, scale and understand as it grows
+
+![](2021-12-27-12-35-17.png)
+
 #### With Redux Saga
 
 > https://redux-saga.js.org/
 
-![](2021-12-27-12-35-17.png)
+See [Counter example](classic/sagas-app)
 
 Advantages:
 * Composition-focused
 * Complex asynchronous flow (e.g., concurrency, racing, cancellation, debounce, etc)
 
-
 Disadvantages:
 * Need to ramp up with *generators*
-* Not standarized, some teams may be used to thunks, redux-pack, etc
 * Effect creators learning curve
-
-### Classic
 
 #### Custom Middlewares
 
@@ -114,22 +118,26 @@ Advantages:
 * Can be easily adapted to own needs
 
 Disadvantages:
-* Very Opinionated
-* Hard to maintain, scale and understand as it grows
 * Complex asynchronous behavior is hard to test and debug
 
 ### Ducks Pattern
 
-> Based on [Ducks: Redux Reducer Bundles proposal](https://github.com/erikras/ducks-modular-redux)
+![](2021-12-27-13-34-24.png)
+
+> Based on [Ducks: Redux Reducer Bundles proposal](https://github.com/erikras/ducks-modular-redux) and [re-ducks](https://github.com/alexnm/re-ducks)
+
+![](2021-12-27-13-49-52.png)
+
+Advantages:
+* **folder-by-feature** or **feature-first folder** approach
+* Scalable & easy to maintain
+* Easy to understand, one feature at a time
 
 #### Redux Toolkit
 
-Advantages:
-
-* Modular pattern
+See [Counter example](./ducks/toolkit)
 
 ## Further Reference
 
 * [Flux notes](https://github.com/herrera-ignacio/architect-handbook#flux--redux)
 * [Redux notes](https://github.com/herrera-ignacio/architect-handbook#technology-specifics)
-
