@@ -30,7 +30,7 @@ type CounterActionTypes = CounterIncrementAction | CounterDecrementAction | Coun
 
 export interface CounterState {
   value: number;
-  status: CounterStatus.IDLE | CounterStatus.LOADING | CounterStatus.FAILED;
+  status: CounterStatus;
 }
 
 const initialState: CounterState = {

@@ -11,6 +11,11 @@
       - [Changes are made with pure functions](#changes-are-made-with-pure-functions)
   - [Design Patterns](#design-patterns)
     - [Classic](#classic)
+      - [With Redux Saga](#with-redux-saga)
+    - [Classic](#classic-1)
+      - [Custom Middlewares](#custom-middlewares)
+    - [Ducks Pattern](#ducks-pattern)
+      - [Redux Toolkit](#redux-toolkit)
   - [Further Reference](#further-reference)
 
 ## Must Know
@@ -77,9 +82,51 @@ Reducers are just pure functions that take the previous state and an action, and
 
 ## Design Patterns
 
-> All examples are based on React+Typescript, see [Quick Start Reference](https://react-redux.js.org/tutorials/typescript-quick-start). 
+> All examples are based on React+Typescript, see [Quick Start Reference](https://react-redux.js.org/tutorials/typescript-quick-start).
+
+Please refer to [Redux Style Guide](https://redux.js.org/style-guide/style-guide) on principles behind these implementations.
 
 ### Classic
+
+#### With Redux Saga
+
+> https://redux-saga.js.org/
+
+![](2021-12-27-12-35-17.png)
+
+Advantages:
+* Composition-focused
+* Complex asynchronous flow (e.g., concurrency, racing, cancellation, debounce, etc)
+
+
+Disadvantages:
+* Need to ramp up with *generators*
+* Not standarized, some teams may be used to thunks, redux-pack, etc
+* Effect creators learning curve
+
+### Classic
+
+#### Custom Middlewares
+
+Advantages:
+* Light-weight implementation for simple promises
+* Dependency-free implementation lets you be productive right if you know JS.
+* Can be easily adapted to own needs
+
+Disadvantages:
+* Very Opinionated
+* Hard to maintain, scale and understand as it grows
+* Complex asynchronous behavior is hard to test and debug
+
+### Ducks Pattern
+
+> Based on [Ducks: Redux Reducer Bundles proposal](https://github.com/erikras/ducks-modular-redux)
+
+#### Redux Toolkit
+
+Advantages:
+
+* Modular pattern
 
 ## Further Reference
 
