@@ -141,3 +141,5 @@ See [Counter example](./ducks/toolkit)
 
 * [Flux notes](https://github.com/herrera-ignacio/architect-handbook#flux--redux)
 * [Redux notes](https://github.com/herrera-ignacio/architect-handbook#technology-specifics)
+* [File architecture using Ducks method](https://www.codementor.io/@aakashsangwan2408/react-redux-file-architecture-using-ducks-method-1kmfg36xeo)
+* [Redux in action chapter 11](https://livebook.manning.com/book/redux-in-action/chapter-11/51)
